@@ -9,19 +9,6 @@ import joblib as jb
 import pandas as pd
 
 
-# In[7]:
-
-
-min = list(range(5,56, 5))
-def convert_minutes(x: int):
-    for m in min:
-        if x % m == x and x > m-5:
-            return m
-        if x in [56,57,58,59]:
-            return 0
-        if x in min+[0]:
-            return x
-
 
 # In[8]:
 
@@ -32,7 +19,7 @@ def convert_minutes(x: int):
 
 def ordinal_encoder(df,ordinal): 
     
-    return ordinal.tranform(df)
+    return ordinal.transform(df)
 
 
 # In[ ]:
