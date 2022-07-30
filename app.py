@@ -67,7 +67,7 @@ def main():
         
         if submit:
             df=np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas])
-            df=ordinal_encoder(df.reshape(1,-1),oridinal)
+            df=ordinal_encoder(df.reshape(1,-1),ordinal)
             pred=predict(df,model)
             st.write(f"The predicted severity is:  {pred[0]}")
             
