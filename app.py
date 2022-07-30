@@ -53,8 +53,8 @@ st.markdown("<h1 style='text-align: center;'>Accident Severity Prediction App ðŸ
 def main():
     with st.form('prediction form'):
         st.subheader("Enter the following features")
-        v_inv=st.slider("Vehicle Involved: ",0,vehicle_inv,value=0,format="%d")
-        cas=st.slider("Number of Casualties :",0,20,value=0,format="%d")
+        v_inv=st.slider("Vehicle Involved: ",1,7,value=0,format="%d")
+        cas=st.slider("Number of Casualties :",1,8,value=0,format="%d")
         hour=st.slider("Hour of Accident: ",1,24)
         light_con=st.selectbox("Lightning Condiions: ",options=light)
         driver_age=st.selectbox("Driver Age: ",options=age)
