@@ -28,7 +28,7 @@ st.set_page_config(page_title='Accident Severity Prediction',layout='wide')
 
 
 #options
-columns=["vehicles_involved","casualties","light_condition","driver_age","day_of_week","road_surface_conditions","junction_type","driving_experience"]
+columns=["Number_of_vehicles_involved","Number_of_casualties","hour","Light_conditions","Age_band_of_driver","Day_of_week","Road_surface_conditions","Types_of_Junction","Driving_experience","Sex_of_casualty"]
 cat_col=["light_condition","driver_age","day_of_week","road_surface_conditions","junction_type","driving_experience"]
 days=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
 age=["18-30",'31-50','Over 51',"Unknown","Under 18"]
