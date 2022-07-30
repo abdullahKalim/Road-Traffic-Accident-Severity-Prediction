@@ -38,7 +38,7 @@ vehicle_inv=20
 casualties=20
 
 road=["Dry","Wet or damp","Snow","Flood over 3cm deep"]
-junction=["Y shape","No Junction","Crossing","Other","Unknown","O shape","T shape","X shape"]
+junction=["Y Shape","No Junction","Crossing","Other","Unknown","O Shape","T Shape","X Shape"]
 
 
 # In[7]:
@@ -66,7 +66,10 @@ def main():
         submit=st.form_submit_button("Predict")
         
         if submit:
-            df=np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas])
+            df=pd.DataFrame(np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas]).reshape(1,-1),columns=columns)
+            df["Number_of_vehicles_involved"]=df["Number_of_vehicles_involved"].astype(int)
+            df["Number_of_casualties"]=df["Number_of_casualties"].astype(int)
+            df["hour"]=df["hour"].astype(int)
             df=ordinal_encoder(df.reshape(-1,1),ordinal)
             pred=predict(df,model)
             st.write(f"The predicted severity is:  {pred[0]}")
