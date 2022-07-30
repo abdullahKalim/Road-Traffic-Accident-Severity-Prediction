@@ -66,9 +66,8 @@ def main():
         submit=st.form_submit_button("Predict")
         
         if submit:
-            df=np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas],columms=columns)
-            df=ordinal_encoder(df,df.reshape(-1,1))
-            data=np.array(df).reshape(1,-1)
+            df=np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas])
+            df=ordinal_encoder(df.reshape(1,-1),oridinal)
             pred=predict(df,model)
             st.write(f"The predicted severity is:  {pred[0]}")
             
