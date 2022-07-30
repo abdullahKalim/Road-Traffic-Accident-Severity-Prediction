@@ -14,8 +14,8 @@ from prediction import *
 # In[10]:
 
 
-model=jb.load(r'C:\\Users\\hp\\Documents\\MGP Projects\\RTA\\Model\\model.joblib')
-ordinal=jb.load(r'C:\\Users\\hp\\Documents\\MGP Projects\\RTA\\Model\\ordinal_encoder.joblib')
+model=jb.load(r'Model/model.joblib')
+ordinal=jb.load(r'Model/ordinal_encoder.joblib')
 
 
 # In[5]:
