@@ -55,7 +55,7 @@ def main():
         st.subheader("Enter the following features")
         v_inv=st.slider("Vehicle Involved: ",1,7,value=0,format="%d")
         cas=st.slider("Number of Casualties :",1,8,value=0,format="%d")
-        hour=st.slider("Hour of Accident: ",1,24)
+        hour=st.slider("Hour of Accident: ",1,24,value=1,format="%d")
         light_con=st.selectbox("Lightning Condiions: ",options=light)
         driver_age=st.selectbox("Driver Age: ",options=age)
         day=st.selectbox("Day of the Week: ",options=days)
