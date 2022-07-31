@@ -1,6 +1,10 @@
 joblib==1.0.1
 numpy==1.20.1
+<<<<<<< HEAD
 pandas==1.2.4'
+=======
+pandas==1.2.4
+>>>>>>> 460f2eee11a0d4907f65b900977cf718b50d4b76
 Pillow==8.2.0
 scikit-learn==1.1.1
 scipy==1.6.3
