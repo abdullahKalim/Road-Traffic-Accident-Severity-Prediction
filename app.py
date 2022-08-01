@@ -70,7 +70,6 @@ def main():
             df["Number_of_vehicles_involved"]=df["Number_of_vehicles_involved"].astype(int)
             df["Number_of_casualties"]=df["Number_of_casualties"].astype(int)
             df["hour"]=df["hour"].astype(int)
-            st.write(df)
             df=ordinal_encoder(df,ordinal)
             pred=predict(df,model)
             st.write(f"The predicted severity is:  {pred[0]}")
