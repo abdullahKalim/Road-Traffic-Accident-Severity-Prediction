@@ -66,7 +66,7 @@ def main():
         submit=st.form_submit_button("Predict")
         
         if submit:
-            df=pd.DataFrame(np.array([v_inv,cas,hour-1,light,driver_age,day,road_cond,junc,exp,sex_cas]).reshape(1,-1),columns=columns)
+            df=pd.DataFrame(np.array([v_inv,cas,hour-1,light_con,driver_age,day,road_cond,junc,exp,sex_cas]).reshape(1,-1),columns=columns)
             df["Number_of_vehicles_involved"]=df["Number_of_vehicles_involved"].astype(int)
             df["Number_of_casualties"]=df["Number_of_casualties"].astype(int)
             df["hour"]=df["hour"].astype(int)
